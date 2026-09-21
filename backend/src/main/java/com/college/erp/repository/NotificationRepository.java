@@ -1,0 +1,1 @@
+package com.college.erp.repository; import com.college.erp.model.entity.NotificationDocument; import org.springframework.data.mongodb.repository.MongoRepository; import java.util.List; public interface NotificationRepository extends MongoRepository<NotificationDocument,String>{List<NotificationDocument> findByUsernameOrderByCreatedAtDesc(String username);}

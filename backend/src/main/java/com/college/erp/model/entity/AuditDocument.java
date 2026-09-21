@@ -1,0 +1,3 @@
+package com.college.erp.model.entity;
+import org.springframework.data.annotation.Id; import org.springframework.data.mongodb.core.mapping.Document; import java.time.Instant;
+@Document("audit_logs") public class AuditDocument { @Id String id; String username,action,entity; Instant createdAt=Instant.now(); public AuditDocument(){} public AuditDocument(String u,String a,String e){username=u;action=a;entity=e;} public String getId(){return id;} public String getUsername(){return username;} public String getAction(){return action;} public String getEntity(){return entity;} public Instant getCreatedAt(){return createdAt;} }

@@ -1,0 +1,4 @@
+package com.college.erp.model.entity;
+import jakarta.persistence.*;
+@Entity @Table(name="students")
+public class Student { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) Long id; @Column(unique=true,nullable=false) String rollNo; String name,course,section,email,status; Integer semester; public Long getId(){return id;} public void setIdForApi(Long v){id=v;} public String getRollNo(){return rollNo;} public void setRollNo(String v){rollNo=v;} public String getName(){return name;} public void setName(String v){name=v;} public String getCourse(){return course;} public void setCourse(String v){course=v;} public Integer getSemester(){return semester;} public void setSemester(Integer v){semester=v;} public String getSection(){return section;} public void setSection(String v){section=v;} public String getEmail(){return email;} public void setEmail(String v){email=v;} public String getStatus(){return status;} public void setStatus(String v){status=v;} }
