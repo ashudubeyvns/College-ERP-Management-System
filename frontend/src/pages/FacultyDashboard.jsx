@@ -30,6 +30,8 @@ export default function FacultyDashboard({user,onLogout}){
             }));
             setSessionals([...existingWithNames,...missing]);
         }
+        if(r[4].status==="fulfilled")setAnalytics(r[4].value);
+        
         if(r.some(x=>x.status==="rejected"))setError("Some live data could not be loaded. Check that the Java backend is running.");
         setLoading(false);
     };
